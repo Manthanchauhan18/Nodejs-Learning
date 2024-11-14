@@ -1,1 +1,1 @@
-console.log("Hello World")
+console.log("Hello World")      // it will print "Hello World" in console (vs code terminal).
