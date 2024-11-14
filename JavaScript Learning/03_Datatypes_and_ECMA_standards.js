@@ -26,7 +26,7 @@ let isLoggedIn = true   // boolean
 // object 
 
 
-console.log(typeof "Manthan")   // return 
+console.log(typeof "Manthan")   // return string
 console.log(typeof age)         // return number
 console.log(typeof null)        // return object
 console.log(typeof undefined)   // return undefined
