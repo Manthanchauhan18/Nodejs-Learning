@@ -123,7 +123,7 @@ let n2 = " Chauhan"
 
 
 let num1 , num2 , num3
-num1 = num2 = num3 = 2+2
+num1 = num2 = num3 = 2+2    // 4
 console.table([num1 , num2 , num3])     // it will print 4 for all variables
 
 let counter = 100
