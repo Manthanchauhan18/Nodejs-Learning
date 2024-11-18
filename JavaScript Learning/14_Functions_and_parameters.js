@@ -1,7 +1,9 @@
 // Functions and parameters
 
 // syntax
-function function_name(){}
+function function_name(){
+
+}
 
 // ex.
 // function addition(){
@@ -41,8 +43,8 @@ function function_name(){}
 // }
 
 // console.log( loginUser("Manthan") ) // Manthan just logged in 
-// console.log( loginUser("") ) // Manthan just logged in 
-// console.log( loginUser() ) // Manthan just logged in 
+// console.log( loginUser("") ) // just logged in 
+// console.log( loginUser() ) // undefined just logged in 
 
 
 // function loginUser(username){
@@ -59,7 +61,7 @@ function function_name(){}
 
 
 // there is another way of avoiding undefined
-function loginUser(username = "User"){
+function loginUser(username = "User"){      // providing default value so if can't get any value then function take this default value
     return (`${username} just logged in`)
 }
 

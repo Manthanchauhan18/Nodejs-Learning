@@ -1,38 +1,39 @@
 // Arrays in JS
 
-// const arr = [0,1,2,3,4,5,"temp" , true]
-// // const myHeros = ["Manthan" , "Chauhan"]
-// // const arr2 = new Array(1,2,3,4)
+// const arr = [0,1,2,3,4,5,"temp" , true]      // in JS you can add multiple datatype values togather in array 
+// const myHeros = ["Manthan" , "Chauhan"]
+// const arr2 = new Array(1,2,3,4)      // another way of declaring array 
 
-// // console.log(arr[3]);    // 3
+// console.log(arr[3]);    // 3
 
-// // // Array methods
-// // arr.push(10)    // [0,1,2,3,4,5,"temp" , true ,10]  -> will add new value at end of the array
-// // console.log(arr);
+// // Array methods
+// arr.push(10)    // [0,1,2,3,4,5,"temp" , true ,10]  -> will add new value at end of the array
+// console.log(arr);
 
-// // arr.pop()
-// // console.log(arr);   // [0,1,2,3,4,5,"temp" , true]  -> will remove value from end of the array
+// arr.pop()
+// console.log(arr);   // [0,1,2,3,4,5,"temp" , true]  -> will remove value from end of the array
 
-// // arr.unshift(100)    
-// // console.log(arr);      // [100,0,1,2,3,4,5,"temp" , true]  -> add new value at starting of the array
+// arr.unshift(100)    
+// console.log(arr);      // [100,0,1,2,3,4,5,"temp" , true]  -> add new value at starting of the array
 
-// // arr.shift()    
-// // console.log(arr);      // [100,0,1,2,3,4,5,"temp" , true]  -> add new value at starting of the array
-
-
-// // console.log(arr.includes(10));      // false
-// // console.log(arr.includes(3));       // true
-// // console.log(arr.indexOf(100) );     // -1 because 100 is not there in array
-// // console.log(arr.indexOf(1));        // 1
+// arr.shift()    
+// console.log(arr);      // [100,0,1,2,3,4,5,"temp" , true]  -> add new value at starting of the array
 
 
-// // const newArr = arr.join()
-// // console.log(arr);           // [0,1,2,3,4,5,"temp" , true]  
-// // console.log(newArr);        // 0,1,2,3,4,5,temp,true        // it will print array as string 
+// console.log(arr.includes(10));      // false
+// console.log(arr.includes(3));       // true
+// console.log(arr.indexOf(100) );     // -1 because 100 is not there in array
+// console.log(arr.indexOf(1));        // 1
 
 
-// // --------------------slice and splice-----------------------------------
-// // slice
+// const newArr = arr.join()
+// console.log(arr);           // [0,1,2,3,4,5,"temp" , true]  
+// console.log(newArr);        // 0,1,2,3,4,5,temp,true        // it will print array as string 
+
+
+// --------------------slice and splice-----------------------------------
+
+// slice
 // console.log("A " , arr);    // A [0,1,2,3,4,5,"temp" , true]  
 // const myn1 = arr.slice(1,3) 
 // console.log(myn1);          // [ 1, 2]

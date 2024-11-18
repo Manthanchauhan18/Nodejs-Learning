@@ -79,12 +79,12 @@ const JsObj = {
 //     console.log("Hello Js User");   
 // }
 
-// console.log(JsObj.greeting);       // Function (anonymous)]     // so without bracket it will give this kind of error
+// console.log(JsObj.greeting);       // [Function (anonymous)]     // so without bracket it will give this kind of error
 // JsObj.greeting();     // Hello Js User     // printing the log which is writen inside the function  
 
 
 // JsObj.greetingTwo = function(){
-//     console.log(`Hello js user, ${this.name}`);
+//     console.log(`Hello js user, ${this.name}`);      // this refer of current object 
 // }
 // JsObj.greetingTwo() // Hello js user, Manthan   // so 'this' keyword refers to the current object using it you are able to access all the properties of current object like this.name , this.email , this.age, etc.
 

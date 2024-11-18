@@ -7,18 +7,19 @@
 // console.log(other);
 
 // console.log(score.toString());    // 100 -> convert into string
-// console.log(score.toString().length);   // 3 after convertion to string we can able to use string methods also
+// console.log(score.toString().length);   // 3     // after convertion to string we can able to use string methods also
 
-// console.log(score.toFixed(2));  // 100.00 givers number in decimal and specific number of digits we are able to give
+// console.log(score.toFixed(2));  // 100.00 gives number in decimal and specific number of digits we are able to give
+// console.log(score.toFixed(3));  // 100.000 gives number in decimal and specific number of digits we are able to give
 
 // const value = 123.8998
 // console.log(value.toPrecision(4));  // 123.9
-// console.log(value.toPrecision(3));  // 123.9
-// console.log(value.toPrecision(2));  // 123.9
+// console.log(value.toPrecision(3));  // 124
+// console.log(value.toPrecision(2));  // 1.2e+2
 
 
 // const num = 10000000
-// console.log(num.toLocaleString('en-In'));  //1,00,00,000    // indian standerd way of writing big values
+// console.log(num.toLocaleString('en-In'));  // 1,00,00,000    // indian standerd way of writing big values
 
 
 

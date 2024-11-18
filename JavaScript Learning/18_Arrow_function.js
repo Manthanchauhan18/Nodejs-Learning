@@ -3,17 +3,25 @@
 // const user = {
 //     name: "Manthan",
 //     price: 100,
+//     student: {
+//         sName: "Manthan2",
+//         str: this.name,      // you can not use this as value inside nested object
+//         str2: this.sName     // you can not use this as value inside nested object
+//     },
 //     welcomeMess: function(){
 //         console.log(`${this.name}, welcome`);
 //         // console.log(this)
 //         /*
-//             Manthan, welcome
 //             { name: 'Manthan', price: 100, welcomeMess: [Function: welcomeMess] }
-//             chauhan, welcome
 //             { name: 'chauhan', price: 100, welcomeMess: [Function: welcomeMess] }
 //         */
 //     }
 // }
+
+// console.log(user.student.sName);    // Mantahn2
+// console.log(user.student.str);      // undefined
+// console.log(user.student.str2);     // undefined
+
 
 // user.welcomeMess()  // Manthan, welcome
 // user.name = "chauhan"
@@ -49,7 +57,7 @@
                 }
             */
 
-// this kind of output you will get if user this inside function 
+// this kind of output you will get if user use 'this' inside function 
 
 // function temp(){
 //     const name = "Manthan"
@@ -77,8 +85,8 @@
 
 // implicit return of object in function 
 // const addTwo = () => {name: "Manthan"}
-// console.log(addTwo());  // undefined // because there is must user of rounded parantheses whenever returning the object 
+// console.log(addTwo());  // undefined     // because there is must user of rounded parantheses whenever returning the object 
 
-const addTwo = () => ({name: "Manthan"})
-console.log(addTwo());  // { name: 'Manthan' }
+// const addTwo = () => ({name: "Manthan"})
+// console.log(addTwo());  // { name: 'Manthan' }
 
