@@ -1,20 +1,22 @@
 // Function with objects and arrays
 
-// function calculateCartPrice(...num1){       // here ... are called as rest, two meanings of it rest and spread based on then situation it will call
+// function calculateCartPrice(...num1){       // here '...' is called as rest, two meanings of it rest and spread based on then situation it will call
 //     return num1     // because of ... num1 will store all the values as array 
 // }
 
 // console.log(calculateCartPrice(200 , 300 ,400 , 500));      // [ 200, 300, 400, 500 ]
 
 
-// -----------------with object --------------------------
+// ----------------- with object --------------------------
 // const user = {
 //     name: "Manthan",
 //     price: 100
 // }
-function handleObj(anyObject){
-    return (`${anyObject.name} , ${anyObject.price}`)
-}
+
+// function handleObj(anyObject){
+//     return (`${anyObject.name} , ${anyObject.price}`)
+// }
+
 // console.log(handleObj(user));   // Manthan , 100
 // this thing will create an issue whennever there is an change in object so you have to handle it with if-else 
 

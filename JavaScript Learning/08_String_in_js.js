@@ -10,7 +10,7 @@
 // console.log(name + surname);        // concate Strings  // Mantahn Chauhan
 // this above is old dated way of concating string
 
-// morden way of concating string was using backticks(``)
+// ---------------------- morden way of concating string was using backticks(``)
 
 // console.log(`Hello , my name is ${name} and my surname is ${surname}`);     // Hello , my name is Manthan and my surname is  Chauhan
 
@@ -44,8 +44,8 @@ const str = new String('Chauhan')
 // console.log(str.substring(2,5));    // auh  -> it will devide string into substring and return but it will not include last index the range is (start , end-1)
 // console.log(str.slice(2,5));    // auh  -> similar to substring
 
-// console.log(str.replace('Chau','Mant'));    // Manthan  -> similar to substring
-// console.log(str.replaceAll('h','y'));    // Cyauyan  -> similar to substring
+// console.log(str.replace('Chau','Mant'));    // Manthan  -> raplace the some words or some characters in string but first occurance only
+// console.log(str.replaceAll('h','y'));    // Cyauyan  -> replace all occurance of given string or given characters
 
 const str2 = "   Manthan   "
 console.log(str2.trim());       // Manthan -> remove white spaces from starting and ending

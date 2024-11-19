@@ -1,9 +1,11 @@
+// Datatypes and ECMA standards
+
 "use strict"        //treat all code as newer version of JS
 
 // alert(3+3)      // it will gives an error :- alert is not defined because we are writing code in vscode and it is a functionality of browser 
 
-// console.log(3+3) console.log("Manthan") // it will show an error because both lines are saprate lines but you write it in single line 
-console.log(3+3); console.log("Mantahn")    // it will not give error because we define line end point semicolan(;)
+// console.log(3+3) console.log("Manthan") // it will show an error because both lines are saprate lines but write it in single line 
+console.log(3+3); console.log("Mantahn")    // it will not give error because we define line end point with semicolan(;)
 
 // but dont write code like this it is a bad habbit of developer so try to write code which is readable easily like below
 console.log(3+3)

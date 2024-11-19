@@ -1,3 +1,5 @@
+// VARIABLES
+
 // the way you are able to declare the const and variables 
 
 // the way of declare const
@@ -20,7 +22,12 @@ comment */
 accountCity = "Mumbai"
 
 
-// prefer to use only const and let for declaring the variable
+//--------------- Note :- prefer to use only const and let for declaring the variable------------------------------
+let checkingVariable = 10
+// let checkingVariable = 20    // let dont allows variable to declare new variable with same name after once declare
+
+var checkingVariable2 = 20
+var checkingVariable2 = 20  // var allows variable to declare new variable with same name after once declare so this is the main problem with var 
 
 
 // accountId = 2       // it will give and error because you can not modify const variable once it initialize
@@ -28,10 +35,18 @@ accountEmail = "temp2@gmail.com"
 accountPassword = "5566"
 accountCity = "Bangalore"
 
-console.log(accountId)
+console.log(accountId)  // 1244242
 console.table([accountEmail , accountPassword , accountCity])   // it will print all the values of variable in table formate at once so
-                                                                // we dont need to write console.log() for every variable 
+                                                                // we dont need to write console.log() for every variable
+                                                                
+                                                                // │ (index) │      Values       │
+                                                                // ├─────────┼───────────────────┤
+                                                                // │    0    │ 'temp2@gmail.com' │
+                                                                // │    1    │      '5566'       │
+                                                                // │    2    │    'Bangalore'    │
+                                                                // └─────────┴───────────────────
 
 
 let accountState;       // semicolan was not mandatory in JS
+let accountState2        // semicolan was not mandatory in JS
 console.log(accountState)   // in JS if you declare variable without initialization and try to printit then it will print "undefine" 

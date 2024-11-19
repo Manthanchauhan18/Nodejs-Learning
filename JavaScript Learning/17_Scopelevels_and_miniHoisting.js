@@ -1,4 +1,4 @@
-//Scope levels and mini hoisting in JS
+// Scope levels and mini hoisting in JS
 
 // function one(){
 //     const username = "Manthan"
