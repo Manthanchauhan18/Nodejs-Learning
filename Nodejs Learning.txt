@@ -1,0 +1,27 @@
+
+// ========================================= Basics ==============================================
+1. Hello world printing 
+2. Variables
+3. Datatypes and ECMA script
+4. Datatype conversion
+5. Comparison of datatypes
+6. Datatype summary
+7. Stack and heap memory
+8. String
+9. Number and maths
+10. Date and time
+11. Array
+12. Objects
+13. Object de-structuring
+14. Functions and parameters
+15. Function with objects and array
+16. Global scope and local scope
+17. Scope levels and mini Hoisting
+18. Arrow function
+19. Immediately invoked function expression
+20. Control flow of code in JS
+21. Iterators or loops
+22. High order array loops
+23. Filter, Map and Reduce
+
+// ============================================ Dom ==============================================

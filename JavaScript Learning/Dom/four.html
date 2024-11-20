@@ -1,0 +1,78 @@
+<!-- edit and remove element -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove element</title>
+ </head>
+ <body style = "background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+ </body>
+ <script>
+    // function addLanguage(langName){
+    //     const li = document.createElement('li')
+    //     li.innerHTML = `${langName}`     // here if you are ussing this kind of line then need to traverse all over the list which is not optimal solution
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("Python")
+    // addLanguage("Java")
+    // addLanguage("Nodejs")    
+
+    // this will add languages one by one which is not optimal solution
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Java")
+    addLanguage("Python")
+    addLanguage("Nodejs")
+    /*
+        JavaScript
+        Java
+        Python
+        Nodejs
+    */
+
+    // Edit
+    // const secondLang = document.querySelector('li:nth-child(2)')
+    // // secondLang.innerHTML = "Ruby"   // this is not optimal solution
+    // const newLi = document.createElement('li')
+    // newLi.textContent = "Ruby"
+    // secondLang.replaceWith(newLi)
+    /*
+        JavaScript
+        Ruby
+        Python
+        Nodejs
+    */
+
+    // Edit
+    // const firstLang = document.querySelector('li:nth-child(1)')
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = "<li>Typescript</li>"
+    // const newLi = document.createElement('li')
+    // newLi.textContent = "TypeScript"
+    // firstLang.replaceWith(newLi) 
+    /*
+        TypeScript
+        Ruby
+        Python
+        Nodejs
+    */
+
+    // remove
+    const removeLast = document.querySelector('li:last-child')
+    removeLast.remove()
+    /*
+        Typescript
+        Java
+        Python
+    */
+
+
+ </script>
+ </html>
