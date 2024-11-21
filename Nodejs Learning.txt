@@ -25,3 +25,14 @@
 23. Filter, Map and Reduce
 
 // ============================================ Dom ==============================================
+one.html
+two.html
+three.html
+four.html
+
+// ========================================== project =====================================================
+1. background colour changing		// Dom
+2. BMI calculator			// Dom
+3. Digital clock			// Dom
+4. Guess the number			// Dom
+
