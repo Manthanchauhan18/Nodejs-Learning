@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Learning</title>
+</head>
+<body>
+    <h1>Async Learning</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //===================== setTimeout() ===================================
+    // // ex.
+    // setTimeout(function(){      // if you want to perform something after some times then used setTimeout
+    //     console.log("Manthan")      
+    // },2000) // Manthan     // this function will print 'Manthan' after 2 seconds    // here this 2000 in miliseconds so it is 2 seconds
+
+    // // ex.
+    // const changeIt = function(){
+    //     document.querySelector('h1').innerText = "Best Js"
+    // }  
+    // setTimeout(changeIt ,2000)  // this will change the text "Async Learning to Best Js after 2 seconds"
+
+    //ex.
+    // const changeIt = function(){
+    //     document.querySelector('h1').innerText = "Best Js"
+    // }  
+    // const stopIt = setTimeout(changeIt ,2000)
+    // document.querySelector('#stop').addEventListener('click' , function(){
+    //     clearTimeout(stopIt)    // if you want to allow to not change the name before it get execute then used of 'clearTimeout()'
+    //     console.log("STOPPED")
+    // })  // so by the click on stop button it will stop the changing of the name 
+
+    // ========================== setInterval() =============================
+    // // ex.
+    // setInterval(function(){
+    //     console.log("Manthan")
+    // }, 1000)
+
+    // //ex.
+    // const sayManthan = function(str){ 
+    //     console.log(str)
+    // }
+    // setInterval(sayManthan , 1000 , "Manthan")
+
+    // // ex.
+    // const sayManthan = function(str){ 
+    //     console.log(str)
+    // }
+    // const startInterval = setInterval(sayManthan , 1000 , "Manthan")
+    // clearInterval(startInterval)    // used to stop the currently running interval
+
+    // ex.
+    const sayManthan = function(str){ 
+        console.log(str)
+    }
+    document.querySelector('#start').addEventListener('click' , function(){
+        const startInterval = setInterval(sayManthan , 1000 , "Manthan")
+        document.querySelector('#stop').addEventListener('click' , () => {
+            clearInterval(startInterval)
+        })
+    })
+    
+</script>
+</html>

@@ -35,4 +35,11 @@ four.html
 2. BMI calculator			// Dom
 3. Digital clock			// Dom
 4. Guess the number			// Dom
+5. keyboard keys 			// Async related
+6. Unlimited Colors			// Async related
+
+// =========================================== event ====================================================
+1. one.html
+2. two.html ( setInterval() , setTimeout() )
+
 
