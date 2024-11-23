@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Learning</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "some url"
+            document.querySelector('button').addEventListener('click' , this.handleClick.bind(this))
+            // so without this .bind(this) handleClick function not getting that which refrance need to take 
+            // so this .bind(this) will pass the refrance of the object 
+        }
+        handleClick(){
+            console.log("button clicked")
+            console.log(this)
+        }
+    }
+    const react = new React();
+</script>
+</html>
