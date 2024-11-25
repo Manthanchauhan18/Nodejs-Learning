@@ -57,4 +57,9 @@ four.html
 7. static_property.js
 8. bind.html
 9. mathPi
+10. getter and setter
+
+// =========================================== other ================================================
+1. closure.html
+
 
