@@ -38,8 +38,23 @@ four.html
 5. keyboard keys 			// Async related
 6. Unlimited Colors			// Async related
 
-// =========================================== event ====================================================
+// =========================================== event ================================================
 1. one.html
 2. two.html ( setInterval() , setTimeout() )
 
+// =========================================== advance one ================================================
+1. api_request.html
+2.promises.js
+
+
+// =========================================== advance one ================================================
+1. one.js		// object literals
+2. object.js
+3. prototype.js
+4. call_and_this.js
+5. myclass.js
+6. inheritance.js
+7. static_property.js
+8. bind.html
+9. mathPi
 

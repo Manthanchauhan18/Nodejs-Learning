@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in js</title>
+</head>
+<body style="background-color: #212121;">
+    <button id="green">Green</button>
+    <button id="orange">Orange</button>
+</body>
+<script>
+
+    // example of lexical scoping
+    // function outer(){
+    //     let username = "Manthan"
+    // }
+    // console.log(username)   // username is not defined
+    // // so this thing is true you can not access the inner function variable from out side that fuction scope
+
+    // but closure means you can access the outer function variable from inside the inner function
+    //ex.
+    // function outer(){
+    //     let username = "Manthan"
+    //     function inner(){
+    //         console.log(username)
+    //     }
+    //     inner()
+    // }
+    // outer() // Manthan
+    // //ex.
+    // function outer(){
+    //     let username = "Manthan"
+    //     function inner(){
+    //         console.log("inner", username)
+    //     }
+    //     function innerTwo(){
+    //         console.log("inner two", username)
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // /*
+    //     inner Manthan
+    //     inner Two Manthan
+    // */
+   
+    //ex.
+    // function outer(){
+    //     let username = "Manthan"
+    //     function inner(){
+    //         let secret = "12345abc"
+    //         console.log("inner", username)
+    //     }
+    //     function innerTwo(){
+    //         console.log("inner two", username)
+    //         console.log(secret);    //  secret is not defined   // because secret variable not define in outer function it is declare in inner one function
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // /*
+    //     inner Manthan
+    //     inner Two Manthan
+    // */
+
+    // example of closure
+    //ex.
+    // function outer(){
+    //     let name = "Manthan"
+    //     function inner(){
+    //         console.log(name)
+    //     }
+    //     return inner;       // here you are not only returning the inner function because there is an outer function exist so there is an lexical scoping concept take place so you will return whole lexical scope
+    // }
+    // const out = outer();
+    // out();  // Manthan
+
+    // ex.
+    // function clickHandler(color){
+    //     document.body.style.backgroundColor = `${color}`
+    // }
+    // document.getElementById('green').onclick = clickHandler('green')
+    // document.getElementById('orange').onclick = clickHandler('orange')
+    // // here you directly see the background color as orange without click on buttons
+    // // because in above case the function clickHandler directly execute the function and onclick want a function return so that it will use
+    // // so here closure take place
+
+    function clickHandler(color){
+        return function(){  // here you are not only returning the function but returning whoel lexical scope because of function having outer function and using outer function variable 'color' so there is and concept of lexical scoping
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    document.getElementById('green').onclick = clickHandler('green')
+    document.getElementById('orange').onclick = clickHandler('orange')
+    // now clickHandler returning the function , not an execution
+
+</script>
+</html>
