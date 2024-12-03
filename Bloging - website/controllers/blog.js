@@ -1,6 +1,7 @@
 const blogModel = require('../models/blog')
 const multer = require('multer')
 const path = require('path')
+const commentModel = require('../models/comment')
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -33,7 +34,29 @@ async function handlePostAddBlog(req, res){
     return res.redirect('/')
 }
 
+async function handleGetBlogById(req, res){
+    const blog = await blogModel.findById(req.params.id).populate('createdBy')
+    const comments = await commentModel.find({blogId: req.params.id}).populate('createdBy')
+    return res.render('blog',{
+        user: req.user,
+        blog,
+        comments
+    })
+}
+
+async function handlePostCommentByBlogId(req, res){
+    await commentModel.create({
+        content: req.body.content,
+        blogId: req.params.blogId,
+        createdBy: req.user._id
+    })
+
+    return res.redirect(`/blog/${req.params.blogId}`)
+}
+
 module.exports = {
     handleGetAddBlog,
-    handlePostAddBlog
+    handlePostAddBlog,
+    handleGetBlogById,
+    handlePostCommentByBlogId
 }
