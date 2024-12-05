@@ -11,8 +11,8 @@
         <div class="container mt-3">
             <div class="row row-cols-4">
                 <% blogs.forEach(blog => { %>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
+                    <div class="col" style="margin-top: 5rem;">
+                        <div class="card" style="width: 18rem">
                             <img src="<%= blog.coverImageUrl %>" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title"><%= blog.title %></h5>
@@ -27,6 +27,6 @@
     <% }else{ %>
 
     <% } %>
-    
+    <%- include('./partials/footer') %>
  </body>
 </html>
