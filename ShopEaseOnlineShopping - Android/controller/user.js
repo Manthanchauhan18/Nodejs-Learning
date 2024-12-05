@@ -1,12 +1,14 @@
-const userModel = require('../modules/user')
+const userModel = require('../models/user')
 
 async function handleUserLogin(req , res){
     const {email, password} = req.body
-    const userValid = await userModel.findOne({email , password})
-    // console.log(email , password , userValid)
-    if(!userValid) return res.status(400).json({Error: "Invalid username or password!"});
-    
-    return res.status(200).json({message: "User login Successful"})
+    try{
+        const userValid = await userModel.matchedPasswordAndLogin(email, password)
+        console.log(userValid)
+        return res.status(200).json({message: "user login successful"})
+    }catch(err){
+        return res.status(401).json({error: `${err.message}` })
+    }
 }
 
 async function handleUserSignup(req , res){
@@ -18,18 +20,23 @@ async function handleUserSignup(req , res){
     const userExist = await userModel.findOne({email})
     console.log(userExist)
     if(userExist) return res.status(400).json({Error: "Email already exist"});
-    const result = await userModel.create({
+    await userModel.create({
         email: email,
         password: password,
         name: name,
         mobile: mobile
     })
-    console.log(result)
     return res.status(200).json({message: "User Created Successfuly"})
 
 }
 
+async function handleGetAllUsers(req, res){
+    const users = await userModel.find({})
+    return res.status(200).json({users})
+}
+
 module.exports = {
     handleUserLogin,
-    handleUserSignup
+    handleUserSignup,
+    handleGetAllUsers
 }

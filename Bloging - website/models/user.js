@@ -30,6 +30,7 @@ const userSchema = new Schema({
     },
 },{timestamps: true})
 
+// this is for singin user password hashing
 userSchema.static("matchPasswordAndGenerateToken", async function(email, password){
     const user = await this.findOne({email})
 
@@ -45,7 +46,7 @@ userSchema.static("matchPasswordAndGenerateToken", async function(email, passwor
     return token;
 })
 
-
+// this is for signup user password hashing
 userSchema.pre("save", function(next){
     const user = this;
     if(!user.isModified("password")) return;
@@ -53,7 +54,7 @@ userSchema.pre("save", function(next){
     const hashedPassword = createHmac("sha256", salt).update(user.password).digest("hex")
 
     this.salt = salt
-    this.password=  hashedPassword
+    this.password = hashedPassword
 
     next()
 })
