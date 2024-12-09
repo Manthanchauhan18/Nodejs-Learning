@@ -23,6 +23,7 @@ async function handleGetAddBlog(req, res){
 
 async function handlePostAddBlog(req, res){
     upload.single('coverImage')(req, res, async(err) => {
+        console.log(req.file)
         const {title, body} = req.body
         const blog = await blogModel.create({
             title,
