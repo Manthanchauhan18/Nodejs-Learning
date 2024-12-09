@@ -5,11 +5,11 @@ const userModel = require('../models/user')
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, path.resolve('./public/uploads'))
+        cb(null, path.resolve(`./public/uploads`))
     },
-    fileName: function(req, file, cb){
+    filename: function(req, file, cb) {
         const fileName = `${Date.now()}-${file.originalname}`
-        ob(null, fileName)
+        cb(null, fileName)
     }
 })
 
@@ -22,23 +22,24 @@ async function handleGetBlog(req, res){
 }
 
 async function handlePostBlog(req, res){
-    // upload.single('blogImage')(req, res, async(err) => {
-        const {blogTitle, blogBody} = req.body
-        const userId = req.query.userId
-        const userFromUserId = await userModel.findById(userId)
-        // console.log(userFromUserId)
+    upload.single('blogImages')(req, res, async(err) => {
         try {
+            const {blogTitle, blogBody} = req.body
+            const userId = req.query.userId
+            const userFromUserId = await userModel.findById(userId)
+            console.log(req.file)
             const blog = await blogModel.create({
                 blogTitle,
                 blogBody,
-                createdBy: {userFromUserId} 
+                createdBy: {userFromUserId},
+                blogImage: `/uploads/${req.file.filename}` 
             })
             console.log(blog)
             return res.status(200).json({message: "blog created Successfuly"})
         } catch (err) {
             return res.status(400).json({error: err.message})
         }   
-    // })
+    })
     
 }
 

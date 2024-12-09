@@ -15,7 +15,7 @@ const blogModel = require('./models/blog')
 const app = express();
 // const PORT = 8000
 // because there on server you have to manage dynamic port so 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 9000
 
 // middleware
 app.use(express.urlencoded({extended: false}))
